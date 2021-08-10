@@ -19,14 +19,14 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun calculateTip() {
-        var stringInTextField = binding.costOfService.text.toString()
-        var cost = stringInTextField.toDoubleOrNull()
+        val stringInTextField = binding.costOfService.text.toString()
+        val cost = stringInTextField.toDoubleOrNull()
         if (cost == null) {
             binding.tipResult.text = ""
             return
         }
 
-        var tipPercentage = when (binding.radioGroup.checkedRadioButtonId) {
+        val tipPercentage = when (binding.radioGroup.checkedRadioButtonId) {
             R.id.option_twenty_percent -> 0.20
             R.id.good_eighteen_percent -> 0.18
             else -> 0.15
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         if (binding.roundUpSwitch.isChecked) {
             tip = kotlin.math.ceil(tip)
         }
-        var formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
         binding.tipResult.text = formattedTip
     }
 }
