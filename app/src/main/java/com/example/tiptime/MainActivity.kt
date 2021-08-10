@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val calculateButton: Button = binding.calculateButton
         calculateButton.setOnClickListener { calculateTip() }
+        displayTip(0.0)
     }
 
 
@@ -40,6 +41,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayTip(tip: Double) {
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
-        binding.tipResult.text = formattedTip
+        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
     }
 }
