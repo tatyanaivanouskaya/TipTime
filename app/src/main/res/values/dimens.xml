@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="layout_margin_top_30">30dp</dimen>
+    <dimen name="layout_margin_left_15">15dp</dimen>
+    <dimen name="min_text_height_48dp">48dp</dimen>
 </resources>
